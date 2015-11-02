@@ -12,10 +12,18 @@ end
 
 def max_2_sum arr
   # YOUR CODE HERE
+  my_sum = 0
+  unless arr.empty?
+    return arr[0] if arr.count == 1
+    arr.sort!
+    my_sum = arr[-1] + arr[-2]
+  end
+  my_sum
 end
 
 def sum_to_n? arr, n
   # YOUR CODE HERE
+  
 end
 
 # Part 2
@@ -36,5 +44,17 @@ end
 # Part 3
 
 class BookInStock
-# YOUR CODE HERE
+  # YOUR CODE HERE
+  attr_accessor :isbn
+  attr_accessor :price 
+  def intialize(isbn, price)
+    raise ArgumentError if price <=0 || isbn.emtpy?
+    @isbn = isbn
+    @price = price
+  end
+  
+  public
+  def price_as_string
+    "$#{"%.2f" % @price}"
+  end
 end
