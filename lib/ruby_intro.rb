@@ -4,6 +4,10 @@
 
 def sum arr
   # YOUR CODE HERE
+  return 0 if arr.empty?
+  my_sum = 0
+  arr.each{|value| my_sum+=value}
+  my_sum
 end
 
 def max_2_sum arr
@@ -18,6 +22,7 @@ end
 
 def hello(name)
   # YOUR CODE HERE
+  "Hello, #{name}"
 end
 
 def starts_with_consonant? s
